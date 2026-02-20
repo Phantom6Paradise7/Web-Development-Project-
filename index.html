@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Residences | India's Premium Property Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Nexus<span>Residences</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Rent</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Find a Home You'll Love</h1>
+            <p>Explore 100% Verified, Dispute-Free Properties across Delhi NCR.</p>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search by locality (e.g., South Delhi, Noida, Dwarka)...">
+                <select id="hero-type-select">
+                    <option value="all">All Property Types</option>
+                    <option value="apartment">Apartment / Flat</option>
+                    <option value="builder-floor">Builder Floor</option>
+                    <option value="villa">Independent House / Villa</option>
+                    <option value="row-house">Row House</option>
+                    <option value="studio">Studio Apartment</option>
+                    <option value="society">Co-operative Society</option>
+                    <option value="farmhouse">Farmhouse</option>
+                </select>
+                <button class="btn-primary">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="localities-section container">
+        <div class="section-title">
+            <h2>Explore Top Localities in NCR</h2>
+            <p style="color: #64748b; margin-top: 0.5rem; font-size: 1.1rem;">Discover high-demand neighborhoods for investment and living.</p>
+        </div>
+        <div class="localities-grid">
+            <div class="locality-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)), url('https://images.pexels.com/photos/259588/pexels-photo-259588.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                <div class="locality-info">
+                    <h3>Ghaziabad & Indirapuram</h3>
+                    <p>850+ Properties</p>
+                </div>
+            </div>
+            
+            <div class="locality-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)), url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                <div class="locality-info">
+                    <h3>South Delhi Prime</h3>
+                    <p>1,200+ Properties</p>
+                </div>
+            </div>
+            
+            <div class="locality-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)), url('https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                <div class="locality-info">
+                    <h3>Noida Expressway</h3>
+                    <p>3,400+ Properties</p>
+                </div>
+            </div>
+            
+            <div class="locality-card" style="background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0)), url('https://images.pexels.com/photos/830891/pexels-photo-830891.jpeg?auto=compress&cs=tinysrgb&w=800');">
+                <div class="locality-info">
+                    <h3>Gurgaon Cyber City</h3>
+                    <p>2,100+ Properties</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title" style="text-align: center; justify-content: center; flex-direction: column;">
+                <h2>Value-Added Services</h2>
+                <p style="color: #64748b; margin-top: 0.5rem;">Everything you need for a smooth real estate journey.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-icon">🏦</div>
+                    <h3>Home Loans</h3>
+                    <p>Get pre-approved home loans from top Indian banks with minimal documentation and lowest interest rates.</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Legal Assistance</h3>
+                    <p>Expert lawyers to verify property titles, draft agreements, and ensure 100% dispute-free transactions.</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon">🧭</div>
+                    <h3>Vastu Consultants</h3>
+                    <p>Consult with certified Vastu experts to ensure your new home brings prosperity and positive energy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties" class="property-section container">
+        
+        <div class="location-toolbar">
+            <div>
+                <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Verified Properties</h2>
+                <p id="location-status-text" style="color: #64748b; font-weight: 500;">Showing properties across Delhi NCR</p>
+            </div>
+            <button id="locate-me-btn" class="btn-outline locate-btn">
+                📍 Find Properties Near Me
+            </button>
+        </div>
+
+        <div class="filters" style="margin-bottom: 2rem;">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="apartment">Apartments</button>
+            <button class="filter-btn" data-filter="builder-floor">Builder Floors</button>
+            <button class="filter-btn" data-filter="society">Societies</button>
+            <button class="filter-btn" data-filter="row-house">Row Houses</button>
+            <button class="filter-btn" data-filter="studio">Studios</button>
+        </div>
+
+        <div class="property-grid" id="property-grid"></div>
+    </section>
+
+    <footer id="contact" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Nexus<span>Residences</span></h3>
+                <p>Your trusted partner in finding the perfect home in the National Capital Region. Verified listings, genuine buyers, zero spam.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Top Brokers (Verified)</h3>
+                <ul>
+                    <li>Rajesh Sharma (South Delhi): +91 98765 43210</li>
+                    <li>Vikram Singh (Noida/Ghaziabad): +91 99887 76655</li>
+                    <li>Priya Desai (Gurgaon/Dwarka): +91 91234 56789</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Trusted Developers</h3>
+                <ul>
+                    <li>DLF Properties: +91 88990 01122</li>
+                    <li>Godrej Properties: +91 77665 54433</li>
+                    <li>Mahagun Group: +91 99000 11223</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nexus Residences. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="fab-add-property" class="fab" title="Post Free Property Ad">
+        <span class="fab-icon">+</span>
+    </button>
+
+    <div id="property-modal" class="modal">
+        <div class="modal-content modal-extra-large">
+            <span class="close-btn" onclick="closeModal('property-modal')">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <div id="add-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close-btn" onclick="closeModal('add-modal')">&times;</span>
+            <h2 style="margin-bottom: 0.5rem; color: var(--primary-color);">List Your Property (Secure)</h2>
+            <p style="font-size: 0.85rem; color: #6b7280; margin-bottom: 1.5rem;">For security, all owners must pass KYC and provide ownership proof.</p>
+            
+            <form id="add-property-form">
+                <h3 class="form-section-title">1. Legal Owner Verification</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Legal Name (As per Govt ID)</label>
+                        <input type="text" id="owner-name" required placeholder="Full Legal Name">
+                    </div>
+                    <div class="form-group">
+                        <label>PAN Card Number</label>
+                        <input type="text" id="owner-pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" placeholder="e.g., ABCDE1234F" title="Must be a valid 10-character PAN">
+                    </div>
+                </div>
+
+                <h3 class="form-section-title">2. Property Details</h3>
+                <div class="form-group">
+                    <label>Property Title (Min 10 chars)</label>
+                    <input type="text" id="new-title" required minlength="10" placeholder="e.g., Spacious 3BHK Builder Floor in Vasant Vihar">
+                </div>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Exact Location / District</label>
+                        <input type="text" id="new-location" required placeholder="e.g., Preet Vihar, East Delhi">
+                    </div>
+                    <div class="form-group">
+                        <label>Pin on Map</label>
+                        <button type="button" class="btn-outline" style="width: 100%;" onclick="alert('Map API Simulation: Location Pinned Successfully!')">📍 Drop Pin</button>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Price (in ₹)</label>
+                        <input type="number" id="new-price" required min="10000" placeholder="e.g., 25000000">
+                    </div>
+                    <div class="form-group">
+                        <label>Area (in sqft)</label>
+                        <input type="number" id="new-area" required min="100" placeholder="e.g., 1800">
+                    </div>
+                    <div class="form-group">
+                        <label>Property Type</label>
+                        <select id="new-type" required>
+                            <option value="apartment">Apartment / Flat</option>
+                            <option value="builder-floor">Builder Floor</option>
+                            <option value="villa">Independent House / Villa</option>
+                            <option value="row-house">Row House</option>
+                            <option value="studio">Studio Apartment</option>
+                            <option value="society">Co-operative Society</option>
+                            <option value="farmhouse">Farmhouse</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="new-status" required>
+                            <option value="For Sale">For Sale</option>
+                            <option value="For Rent">For Rent</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h3 class="form-section-title">3. Legal Documents & Dispute Check</h3>
+                <div class="form-group">
+                    <label>Upload Registry/Ownership Proof (PDF/JPG)</label>
+                    <input type="file" id="ownership-doc" accept=".pdf, .jpg, .jpeg" required style="padding: 0.5rem; background: var(--card-bg);">
+                </div>
+                
+                <div class="form-group" style="display: flex; gap: 10px; align-items: flex-start; margin-top: 1rem; padding: 1rem; background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981; border-radius: 8px;">
+                    <input type="checkbox" id="legal-declaration" required style="width: 20px; height: 20px; margin-top: 3px;">
+                    <label for="legal-declaration" style="font-size: 0.9rem; margin-bottom: 0; line-height: 1.4;">
+                        <strong>Legal Declaration:</strong> I hereby declare that I am the rightful owner/authorized agent of this property. The property has a <strong>Clear Title</strong> and is entirely free from any ongoing legal disputes, litigations, or encumbrances.
+                    </label>
+                </div>
+
+                <button type="submit" id="submit-btn" class="btn-primary" style="width: 100%; margin-top: 1.5rem; font-size: 1.1rem;">Verify & Publish Listing</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
